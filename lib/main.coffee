@@ -3,6 +3,10 @@
 SpellCheckView = null
 spellCheckViews = {}
 
+//force to use hunspell in mac os x. 
+process.env["SPELLCHECKER_PREFER_HUNSPELL"] = true
+
+
 module.exports =
   activate: ->
     # Set up the task for handling spell-checking in the background. This is
